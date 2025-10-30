@@ -1,0 +1,121 @@
+{
+  "teamName": "DU_Black_Noodles",
+  "flagline": "dubn{w3_w1ll_ru13}",
+  "members": [
+    {
+      "name": "Shafahid",
+      "avatar": "/images/members/shafaid.png",
+      "moto": "I'm the OSINT boy",
+      "tags": [
+        "Web",
+        "Osint",
+        "Misc"
+      ],
+      "github": "https://github.com/Shafahid",
+      "facebook": "https://www.facebook.com/shafahid.rahman",
+      "linkedin": "https://www.linkedin.com/in/chowdhury-shafahid-rahman-359b72301/"
+    },
+    {
+      "name": "Aurn0b",
+      "avatar": "/images/members/arnoub.png",
+      "moto": "Not touching until someone solves it",
+      "tags": [
+        "Crypto",
+        "Web",
+        "Misc"
+      ],
+      "github": "https://github.com/Shafahid",
+      "facebook": "https://www.facebook.com/ronin.ronin.79677471",
+      "linkedin": "https://www.linkedin.com/in/ahil-islam-aurnob-0173b2317/"
+    },
+    {
+      "name": "absFuty7",
+      "avatar": "/images/members/abs.png",
+      "moto": "Other than Irony, I'm good at Networking",
+      "tags": [
+        "Networking",
+        "Forensics",
+        "Rev"
+      ],
+      "github": "https://github.com/Abs-Futy7",
+      "facebook": "https://www.facebook.com/Abu.Bakar.Siddique.abs.1224566",
+      "linkedin": "https://www.linkedin.com/in/md-abu-bakar-siddique-59b881237/"
+    },
+    {
+      "name": "dibbajothy",
+      "avatar": "/images/members/dibbajothy.png",
+      "moto": "Everything can be PWNED!",
+      "tags": [
+        "DFIR",
+        "Pwn",
+        "Rev"
+      ],
+      "github": "https://github.com/dibbajothy",
+      "facebook": "https://facebook.com/dibbajothy",
+      "linkedin": "https://www.linkedin.com/in/dibbajothy-sarker-3b73ab269/"
+    }
+  ],
+  "contests": [
+    {
+      "place": 1,
+      "name": "R3CTF 2025",
+      "type": "Online",
+      "date": "07/06/2023",
+      "rating": 49,
+      "link": "https://ctftime.org/event/0"
+    },
+    {
+      "place": 2,
+      "name": "Google Capture The Flag 2025",
+      "type": "On-Site",
+      "date": "07/06/2024",
+      "rating": 194.34,
+      "link": "https://ctftime.org/event/0"
+    },
+    {
+      "place": 3,
+      "name": "IERAE CTF 2025",
+      "type": "On-Site",
+      "date": "07/08/2024",
+      "rating": 23.59,
+      "link": "https://ctftime.org/event/0"
+    },
+    {
+      "place": 4,
+      "name": "Midnight Sun CTF 2025 Finals",
+      "type": "Online",
+      "date": "07/06/2025",
+      "rating": 103.3,
+      "link": "https://ctftime.org/event/0"
+    },
+    {
+      "place": 2,
+      "name": "bi0sCTF 2025",
+      "type": "Online",
+      "date": "07/06/2028",
+      "rating": 117.85,
+      "link": "https://ctftime.org/event/0"
+    }
+  ],
+  "writeups": [],
+  "gallery": [
+    {
+      "imageUrl": "/images/gallery/1.jpg",
+      "caption": "All the winners of BUP Tech Carnival 2025",
+      "date": "September 27, 2025",
+      "id": 1
+    },
+    {
+      "imageUrl": "/images/gallery/2.jpg",
+      "caption": "2nd Runners up at the BUPCTF2025",
+      "date": "September 27, 2025",
+      "id": 2
+    },
+    {
+      "imageUrl": "/images/gallery/3.jpg",
+      "caption": "Outside BUP",
+      "date": "September 27, 2025",
+      "id": 3
+    }
+  ]
+}
