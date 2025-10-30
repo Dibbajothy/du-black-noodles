@@ -57,43 +57,115 @@
   ],
   "contests": [
     {
-      "place": 1,
-      "name": "R3CTF 2025",
-      "type": "Online",
-      "date": "07/06/2023",
-      "rating": 49,
-      "link": "https://ctftime.org/event/0"
+      "place": 2,
+      "name": "DIUCTF-2025 Final",
+      "type": "On-Site",
+      "date": "26/10/2025",
+      "rating": 3632,
+      "link": "https://No Link"
     },
     {
-      "place": 2,
-      "name": "Google Capture The Flag 2025",
-      "type": "On-Site",
-      "date": "07/06/2024",
-      "rating": 194.34,
-      "link": "https://ctftime.org/event/0"
+      "place": 14,
+      "name": "DIUCTF-2025 Prili",
+      "type": "Online",
+      "date": "21/10/2025",
+      "rating": 2145,
+      "link": "https://No-Link"
     },
     {
       "place": 3,
-      "name": "IERAE CTF 2025",
+      "name": "BUPCTF-2025 Final",
       "type": "On-Site",
-      "date": "07/08/2024",
-      "rating": 23.59,
+      "date": "26/09/2025",
+      "rating": 2660,
+      "link": "https://No_LInk"
+    },
+    {
+      "place": 10,
+      "name": "BUPCTF-2025 Prili",
+      "type": "Online",
+      "date": "22/09/2025",
+      "rating": 950,
+      "link": "https://No_Link"
+    },
+    {
+      "place": 7,
+      "name": "BDSecCTF-2025",
+      "type": "Online",
+      "date": "21/07/2025",
+      "rating": 4445,
+      "link": "https://ctftime.org/event/2784/"
+    },
+    {
+      "place": 3,
+      "name": "UAP CYBER SIEGE-2025 Final",
+      "type": "On-Site",
+      "date": "03/05/2025",
+      "rating": 3460,
       "link": "https://ctftime.org/event/0"
     },
     {
-      "place": 4,
-      "name": "Midnight Sun CTF 2025 Finals",
+      "place": 9,
+      "name": "UAP CYBER SIEGE-2025 Prili",
       "type": "Online",
-      "date": "07/06/2025",
-      "rating": 103.3,
+      "date": "27/04/2025",
+      "rating": 2590,
+      "link": "https://ctftime.org/event/0"
+    },
+    {
+      "place": 191,
+      "name": "picoCTF 2025",
+      "type": "Online",
+      "date": "18/03/2025",
+      "rating": 5910,
+      "link": "https://picoctf.org/competitions/2025-spring.html"
+    },
+    {
+      "place": 10,
+      "name": "BCSCTF 2025",
+      "type": "Online",
+      "date": "14/02/2025",
+      "rating": 4206,
+      "link": "https://ctftime.org/event/0"
+    },
+    {
+      "place": 9,
+      "name": "CyberRaid CTF-2025 Final",
+      "type": "On-Site",
+      "date": "02/02/2025",
+      "rating": 1650,
+      "link": "https://ctftime.org/event/0"
+    },
+    {
+      "place": 50,
+      "name": "Knight CTF-2025",
+      "type": "Online",
+      "date": "21/01/2025",
+      "rating": 3265,
+      "link": "https://ctftime.org/event/2610"
+    },
+    {
+      "place": 3,
+      "name": "CyberRaid CTF-2025 Prili",
+      "type": "Online",
+      "date": "18/01/2025",
+      "rating": 1880,
+      "link": "https://ctftime.org/event/0"
+    },
+    {
+      "place": 12,
+      "name": "SMP CTF-2024",
+      "type": "Online",
+      "date": "31/12/2024",
+      "rating": 2815,
       "link": "https://ctftime.org/event/0"
     },
     {
       "place": 2,
-      "name": "bi0sCTF 2025",
+      "name": "DUCTF-2024",
       "type": "Online",
-      "date": "07/06/2028",
-      "rating": 117.85,
+      "date": "31/12/2024",
+      "rating": 3356,
       "link": "https://ctftime.org/event/0"
     }
   ],
@@ -116,6 +188,24 @@
       "caption": "Outside BUP",
       "date": "September 27, 2025",
       "id": 3
+    },
+    {
+      "imageUrl": "/images/gallery/uap.jpg",
+      "caption": "2nd Runners Up UAP CyberSIEGE",
+      "date": "May 9, 2025",
+      "id": 4
+    },
+    {
+      "imageUrl": "/images/gallery/diuabs.jpg",
+      "caption": "Abs carving flag",
+      "date": "October 26, 2025",
+      "id": 5
+    },
+    {
+      "imageUrl": "/images/gallery/diuprize.jpg",
+      "caption": "1st Runners Up at DIUCTF2025",
+      "date": "October 26, 2025",
+      "id": 6
     }
   ]
 }
