@@ -167,6 +167,30 @@
       "date": "31/12/2024",
       "rating": 3356,
       "link": "https://ctftime.org/event/0"
+    },
+    {
+      "place": 6,
+      "name": "BUP-CipherSprint-2025-Prili",
+      "type": "Online",
+      "date": "09/11/2025",
+      "rating": 2965,
+      "link": "https://No Link"
+    },
+    {
+      "place": 2,
+      "name": "BUP-CipherSprint-2025-Final",
+      "type": "On-Site",
+      "date": "16/11/2025",
+      "rating": 1165,
+      "link": "https://No Link"
+    },
+    {
+      "place": 4,
+      "name": "Al-Khwarizmi-CTF-2025-Prili",
+      "type": "Online",
+      "date": "16/12/2025",
+      "rating": 3743,
+      "link": "https://No Link"
     }
   ],
   "writeups": [],
@@ -206,6 +230,12 @@
       "caption": "1st Runners Up at DIUCTF2025",
       "date": "October 26, 2025",
       "id": 6
+    },
+    {
+      "imageUrl": "/images/gallery/cyphersprint.jpeg",
+      "caption": "2nd Runners Up-CypherSprint-2025",
+      "date": "November 16, 2025",
+      "id": 7
     }
   ]
 }
