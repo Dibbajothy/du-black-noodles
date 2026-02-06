@@ -192,6 +192,30 @@
       "date": "16/12/2025",
       "rating": 3743,
       "link": "https://No Link"
+    },
+    {
+      "place": 17,
+      "name": "BUETCTF-2026-Prili",
+      "type": "Online",
+      "date": "29/01/2026",
+      "rating": 3574,
+      "link": "https://no-link.com"
+    },
+    {
+      "place": 4,
+      "name": "Al-Khwarizmi-CTF-2025-Final",
+      "type": "On-Site",
+      "date": "30/01/2026",
+      "rating": 5520,
+      "link": "https://no-link.com"
+    },
+    {
+      "place": 29,
+      "name": "BUETCTF-2026-Final",
+      "type": "On-Site",
+      "date": "31/01/2026",
+      "rating": 2170,
+      "link": "https://no-link.com"
     }
   ],
   "writeups": [],
@@ -237,56 +261,241 @@
       "caption": "2nd Runners Up-CypherSprint-2025",
       "date": "November 16, 2025",
       "id": 7
+    },
+    {
+      "imageUrl": "/images/gallery/cypherSprintPrize.JPG",
+      "caption": "Prize Giving BUP-CypherSprint-2025",
+      "date": "November 16, 2025",
+      "id": 8
+    },
+    {
+      "imageUrl": "/images/gallery/CypherSprintClosing.JPG",
+      "caption": "Cypher Sprint Closing Ceremony",
+      "date": "November 16, 2025",
+      "id": 9
+    },
+    {
+      "imageUrl": "/images/gallery/ShibirCTF.jpg",
+      "caption": "Al-Khwarizmi-CTF-4th",
+      "date": "January 30, 2026",
+      "id": 10
+    },
+    {
+      "imageUrl": "/images/gallery/chillingbuet.png",
+      "caption": "Chilling at Buet",
+      "date": "January 31, 2026",
+      "id": 11
     }
   ],
   "resources": [
     {
-      "name": "CyberChef",
-      "category": "Crypto",
-      "desc": "The Swiss Army Knife of data conversion",
-      "url": "https://gchq.github.io/CyberChef/"
+      "title": "Quick Forensics Commands",
+      "icon": "fa-terminal",
+      "width": "full",
+      "blocks": [
+        {
+          "type": "code",
+          "label": "Disk Conversion (VDI/VMDK to RAW)",
+          "value": "# VDI -> RAW\nqemu-img convert -p -O raw disk.vdi disk.raw\n\n# VMDK -> RAW\nqemu-img convert -p -O raw disk.vmdk disk.raw\n\n# Mount RAW disk\nsudo losetup -Pf --show disk.raw\nsudo mount -o ro /dev/loop0p1 /mnt/disk"
+        },
+        {
+          "type": "code",
+          "label": "Fast Keyword Search (Riggrep/Grep)",
+          "value": "# Fast search for flags (Recursive, Binary safe)\ngrep -RIn --binary-files=without-match \"flag{\" /mnt/disk\n\n# Strings search\nstrings -a /mnt/disk/suspect_file | grep -iE 'flag|ctf|key'\n\n# Riggrep (Modern, faster replacement)\nrg -n \"flag{\" /mnt/disk\nrg -a \"flag{\" /mnt/disk  # Search binary too"
+        },
+        {
+          "type": "code",
+          "label": "Find Suspicious Files",
+          "value": "# Recently changed files\nfind /mnt/disk -xdev -type f -printf '%TY-%Tm-%Td %TH:%TM %p\\n' | sort -r | head\n\n# Big or Hidden files\nfind /mnt/disk -xdev -type f -size +50M -ls\nfind /mnt/disk -xdev -type f -name \".*\" -ls"
+        }
+      ]
     },
     {
-      "name": "pwntools",
-      "category": "Pwn",
-      "desc": "CTF framework and exploit development library",
-      "command": "pip install pwntools"
+      "title": "System Analysis (Linux)",
+      "icon": "fa-linux",
+      "width": "full",
+      "blocks": [
+        {
+          "type": "code",
+          "label": "Persistence & Auth",
+          "value": "# Users & Passwords\ncat /etc/passwd\ncat /etc/shadow\ncat /etc/sudoers\n\n# SSH Keys\nfind /home -maxdepth 3 -type f -name \"authorized_keys\" -o -name \"id_rsa*\"\n\n# Cron Jobs\nls -la /etc/cron.* /var/spool/cron\ncat /etc/crontab\n\n# Systemd Services\nls -la /etc/systemd/system\nfind /etc/systemd -type f -name \"*.service\""
+        },
+        {
+          "type": "code",
+          "label": "Logs",
+          "value": "# Debian/Ubuntu\ncat /var/log/auth.log\ncat /var/log/syslog\n\n# RHEL/CentOS\ncat /var/log/secure\ncat /var/log/messages\n\n# Web & Secrets\nls -la /var/www\ngrep -RIn \"PASS\\|TOKEN\\|KEY\\|SECRET\" /etc /home"
+        }
+      ]
     },
     {
-      "name": "Burp Suite",
-      "category": "Web",
-      "desc": "The class-leading tool for web security testing",
-      "url": "https://portswigger.net/burp"
+      "title": "Steganography",
+      "icon": "fa-image",
+      "width": "half",
+      "blocks": [
+        {
+          "type": "subtitle",
+          "value": "Data Hiding & Extraction"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "steghide",
+              "desc": "Hide/extract data in image/audio"
+            },
+            {
+              "name": "zsteg",
+              "desc": "Detect steganography in PNG/BMP"
+            },
+            {
+              "name": "stegsolve",
+              "desc": "Image solver with various filters"
+            },
+            {
+              "name": "exiftool",
+              "desc": "Read/write meta information"
+            },
+            {
+              "name": "binwalk",
+              "desc": "Firmware analysis and extraction"
+            }
+          ]
+        },
+        {
+          "type": "subtitle",
+          "value": "Web Tools"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Aperi'Solve",
+              "desc": "Online platform for image steganography"
+            },
+            {
+              "name": "FotoForensics",
+              "desc": "ELA (Error Level Analysis)"
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "Ghidra",
-      "category": "Rev",
-      "desc": "Software reverse engineering (SRE) suite of tools",
-      "url": "https://ghidra-sre.org/"
+      "title": "Cryptography & Hash",
+      "icon": "fa-lock",
+      "width": "half",
+      "blocks": [
+        {
+          "type": "subtitle",
+          "value": "Cracking"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "John the Ripper",
+              "desc": "JTR Suite (zip2john, ssh2john, etc.)"
+            },
+            {
+              "name": "Hashcat",
+              "desc": "Advanced GPU-based password recovery"
+            },
+            {
+              "name": "RsaCtfTool",
+              "desc": "RSA attack tool"
+            }
+          ]
+        },
+        {
+          "type": "subtitle",
+          "value": "Identification"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "hash-identifier",
+              "desc": "Identify hash types"
+            },
+            {
+              "name": "CyberChef",
+              "desc": "The Swiss Army Knife"
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "HackTricks",
-      "category": "Reference",
-      "desc": "A huge collection of hacking tricks and techniques",
-      "url": "https://book.hacktricks.xyz/"
+      "title": "Forensics & Analysis",
+      "icon": "fa-magnifying-glass",
+      "width": "half",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Volatility 3",
+              "desc": "Memory forensics framework"
+            },
+            {
+              "name": "Autopsy",
+              "desc": "Digital forensics platform"
+            },
+            {
+              "name": "Wireshark",
+              "desc": "Network protocol analyzer"
+            },
+            {
+              "name": "NetworkMiner",
+              "desc": "Network forensic analysis tool"
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "GTFOBins",
-      "category": "Reference",
-      "desc": "Bypass local security restrictions in standard binaries",
-      "url": "https://gtfobins.github.io/"
+      "title": "Reverse Engineering",
+      "icon": "fa-microchip",
+      "width": "half",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            {
+              "name": "Ghidra",
+              "desc": "SRE suite by NSA"
+            },
+            {
+              "name": "IDA Pro",
+              "desc": "Interactive Disassembler"
+            },
+            {
+              "name": "Radare2",
+              "desc": "Unix-like reverse engineering framework"
+            },
+            {
+              "name": "GDB + Pwndbg",
+              "desc": "Debugger"
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "seclists",
-      "category": "Wordlists",
-      "desc": "Collection of multiple types of lists used during security assessments",
-      "command": "apt install seclists"
-    },
-    {
-      "name": "nmap",
-      "category": "Network",
-      "desc": "Network exploration tool and security / port scanner",
-      "command": "apt install nmap"
+      "title": "Guide: Recovering Encrypted Private Data",
+      "icon": "fa-key",
+      "width": "full",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "Recovering .ecryptfs directories or .Private folders found during disk analysis."
+        },
+        {
+          "type": "code",
+          "label": "1. Locate and Mount",
+          "value": "# Locate the .Private folder\nfind / -name \".Private\" 2>/dev/null\n\n# Attempt recovery (requires wrapped-passphrase or login password)\nsudo ecryptfs-recover-private .Private\n\n# If successful, it mounts to /tmp/ecryptfs.XXXXXX\ncd /tmp/ecryptfs.XXXXXX\ncat flag.txt"
+        }
+      ]
     }
   ]
 }
