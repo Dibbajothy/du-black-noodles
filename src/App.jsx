@@ -7,6 +7,7 @@ import NotFound from './pages/NotFound'
 import logo from './assets/logo.png'
 import Gallery from './pages/Gallery.jsx'
 import Resources from './pages/Resources.jsx'
+import DUCTF2026 from './pages/DUCTF2026'
 import Footer from './components/Footer.jsx'
 
 const Nav = () => (
@@ -21,6 +22,7 @@ const Nav = () => (
       <NavLink to="/resources" className="link">Resources</NavLink>
       <NavLink to="/blog" className="link">Blog</NavLink>
       <NavLink to="/team" className="btn">Team</NavLink>
+      <NavLink to="/ductf2026" className="btn-ductf">DUCTF2026</NavLink>
     </div>
   </nav>
 )
@@ -39,6 +41,7 @@ export default function App() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/ductf2026" element={<DUCTF2026 />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
