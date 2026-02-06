@@ -5,10 +5,10 @@ export default function Footer() {
     return (
         <footer className="footer">
             <div className="footer-social-row">
-                <a href="mailto:team@dublacknoodles.com" className="footer-social-link" aria-label="Email">
+                <a href="mailto:blacknoodles29@gmail.com" className="footer-social-link" aria-label="Email">
                     <i className="fa-solid fa-envelope"></i>
                 </a>
-                <a href="https://github.com/DU-Black-Noodles" target="_blank" rel="noreferrer" className="footer-social-link" aria-label="GitHub">
+                <a href="https://github.com/Abs-Futy7/DU_Black_Noodles" target="_blank" rel="noreferrer" className="footer-social-link" aria-label="GitHub">
                     <i className="fa-brands fa-github"></i>
                 </a>
                 <a href="https://ctftime.org/team/279896" target="_blank" rel="noreferrer" className="footer-social-link" aria-label="CTFtime">
