@@ -4,7 +4,20 @@ import BlogCard from '../components/BlogCard';
 import data from '../data/data.json'
 import PlaceBadge from '../components/PlaceBadge'
 import Tag from '../components/Tag'
+import logo from '../assets/logo.png'
 
+
+// Custom hook to calculate team stats from data
+function useTeamStats() {
+  return useMemo(() => {
+    const contests = data.contests || [];
+    return {
+      totalContests: contests.length,
+      podiumFinishes: contests.filter(c => c.place <= 3).length,
+      totalPoints: contests.reduce((sum, c) => sum + c.rating, 0),
+    };
+  }, []);
+}
 
 
 function ContestRow({ c, index, isFirst, isLast }) {
@@ -34,7 +47,8 @@ function ContestRow({ c, index, isFirst, isLast }) {
 
 
 export default function Home() {
-  const { teamName, flagline } = data;
+  const { teamName } = data;
+  const stats = useTeamStats();
 
   // --- Logic to get LATEST items ---
   const latestWriteups = (data.writeups || []).slice(0, 2); // Get first 2 writeups
@@ -69,16 +83,44 @@ export default function Home() {
 
   return (
     <>
-      {/* 1. HERO SECTION (Kept from before) */}
-      <div className="hero" style={{ padding: '100px 16px' }}>
-        <h1 className="noodle-fill">{teamName}</h1>
-        <div className="flag" style={{ fontSize: 'clamp(18px, 2.5vw, 24px)', color: '#9bd979' }}>
-          {flagline}
+      {/* PROFESSIONAL HERO SECTION */}
+      <section className="hero">
+        <div className="hero-content">
+          <img src={logo} className="hero-logo" alt="DU Black Noodles" />
+          <h1>{teamName}</h1>
+          <p className="hero-tagline">
+            Competitive CTF Team from University of Dhaka
+          </p>
+
+          <div className="hero-stats">
+            <div className="stat">
+              <span className="stat-number">{stats.totalContests}</span>
+              <span className="stat-label">Contests</span>
+            </div>
+            <div className="stat">
+              <span className="stat-number">{stats.podiumFinishes}</span>
+              <span className="stat-label">Top 3 Finishes</span>
+            </div>
+            <div className="stat">
+              <span className="stat-number">{stats.totalPoints.toLocaleString()}</span>
+              <span className="stat-label">Total Points</span>
+            </div>
+          </div>
+
+          <div className="hero-cta">
+            <Link to="/team" className="btn btn-primary">Meet The Team</Link>
+            <a
+              href="https://ctftime.org/team/279896"
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-outline"
+            >
+              <i className="fa-solid fa-trophy" style={{ marginRight: 8 }}></i>
+              CTFtime Profile
+            </a>
+          </div>
         </div>
-        <Link to="/team" className="btn" style={{ marginTop: '24px' }}>
-          Meet The Team
-        </Link>
-      </div>
+      </section>
 
 
       <section className="container" style={{ marginTop: '48px' }}>

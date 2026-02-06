@@ -62,7 +62,7 @@
 import React, { useState, useMemo } from 'react';
 // Assuming data.json is in src/data/data.json
 // If it's elsewhere, you might need to adjust the path (e.g., ../data/data.json)
-import data from '../data/data.json'; 
+import data from '../data/data.json';
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -102,7 +102,7 @@ export default function Gallery() {
               className="gallery-item"
               onClick={() => openModal(item)}
             >
-              <img src={item.imageUrl} alt={item.caption} />
+              <img src={item.imageUrl} alt={item.caption} loading="lazy" />
               <div className="gallery-caption-overlay">
                 <div style={{ fontWeight: 700, marginBottom: '4px' }}>{item.caption}</div>
                 <div className="small">{item.date}</div>

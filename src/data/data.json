@@ -32,6 +32,7 @@
       "name": "absFuty7",
       "avatar": "/images/members/abs.png",
       "moto": "Other than Irony, I'm good at Networking",
+      "isCaptain": true,
       "tags": [
         "Networking",
         "Forensics",
@@ -236,6 +237,56 @@
       "caption": "2nd Runners Up-CypherSprint-2025",
       "date": "November 16, 2025",
       "id": 7
+    }
+  ],
+  "resources": [
+    {
+      "name": "CyberChef",
+      "category": "Crypto",
+      "desc": "The Swiss Army Knife of data conversion",
+      "url": "https://gchq.github.io/CyberChef/"
+    },
+    {
+      "name": "pwntools",
+      "category": "Pwn",
+      "desc": "CTF framework and exploit development library",
+      "command": "pip install pwntools"
+    },
+    {
+      "name": "Burp Suite",
+      "category": "Web",
+      "desc": "The class-leading tool for web security testing",
+      "url": "https://portswigger.net/burp"
+    },
+    {
+      "name": "Ghidra",
+      "category": "Rev",
+      "desc": "Software reverse engineering (SRE) suite of tools",
+      "url": "https://ghidra-sre.org/"
+    },
+    {
+      "name": "HackTricks",
+      "category": "Reference",
+      "desc": "A huge collection of hacking tricks and techniques",
+      "url": "https://book.hacktricks.xyz/"
+    },
+    {
+      "name": "GTFOBins",
+      "category": "Reference",
+      "desc": "Bypass local security restrictions in standard binaries",
+      "url": "https://gtfobins.github.io/"
+    },
+    {
+      "name": "seclists",
+      "category": "Wordlists",
+      "desc": "Collection of multiple types of lists used during security assessments",
+      "command": "apt install seclists"
+    },
+    {
+      "name": "nmap",
+      "category": "Network",
+      "desc": "Network exploration tool and security / port scanner",
+      "command": "apt install nmap"
     }
   ]
 }
