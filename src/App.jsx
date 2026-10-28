@@ -41,7 +41,6 @@ export default function App() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/ductf2026" element={<DUCTF2026 />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
